@@ -31,6 +31,10 @@ PizzaOrder.prototype.pizzaCalculation = function(){ //create a prototype method 
     }
   }
 }
+
+
+
+
 function resetFields() {
   $("#order-name").val("");
   $("#size").val("");

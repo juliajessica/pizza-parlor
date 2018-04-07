@@ -17,11 +17,12 @@ body {
 
 .pizzaOrderName {
   cursor: pointer;
-  color: #0088cc;
+  color: #5d6b3e;
 }
 
-pizzaOrderName:hover {
+.pizzaOrderName:hover {
   text-decoration: underline;
+  color: #41492d;
 }
 
 #h1Banner {
@@ -55,12 +56,6 @@ label, .font-label, .output-text, .pizzaOrderName {
   color: #3d5432;
   font-size: 22px;
 }
-
-/*a:hover {
-  opacity:1;
-  color: #777c76;
-  cursor:pointer;
-}*/
 
 #order-output {
   display: none;
