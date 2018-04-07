@@ -20,12 +20,12 @@
         <div class="col">
           <form id="pizza-form">
             <label>Enter a name for your order:</label>
-            <input id="order-name" class="form-control input-text" type="text" placeholder="first and last name" required>
+            <input id="order-name" value="julia" class="form-control input-text" type="text" placeholder="first and last name" required>
             <h3 class="font-label">Pick your pizza size:</h3>
             <div class="form-group">
               <select id="size" class="form-control input-text" required>
-                <option value="" selected="selected" class="input-text" required>Select a Size</option>
-                <option name="pizzaSize" value="Small">Small</option>
+                <option class="input-text" required>Select a Size</option>
+                <option name="pizzaSize" selected="selected" value="Small">Small</option>
                 <option name="pizzaSize" value="Medium">Medium</option>
                 <option name="pizzaSize" value="Large">Large</option>
                 <option name="pizzaSize" value="Extra Large">Extra Large</option>
@@ -33,19 +33,19 @@
             </div>
             <h3 class="font-label">Pick your pizza toppings:</h3>
             <div class="form-group input-text" required>
-              <input type="checkbox" name="topping" value="Sausage"> Sausage<br>
-              <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni<br>
-              <input type="checkbox" name="topping" value="Mushrooms"> Mushrooms<br>
-              <input type="checkbox" name="topping" value="Green Peppers"> Green Peppers<br>
-              <input type="checkbox" name="topping" value="Olives"> Olives<br>
-              <input type="checkbox" name="topping" value="Extra Cheese"> Extra Cheese + $1<br>
+              <input class="toppings" type="checkbox" name="topping" value="Sausage" checked> Sausage<br>
+              <input class="toppings" type="checkbox" name="topping" value="Pepperoni"> Pepperoni<br>
+              <input class="toppings" type="checkbox" name="topping" value="Mushrooms" checked> Mushrooms<br>
+              <input class="toppings" type="checkbox" name="topping" value="Green Peppers"> Green Peppers<br>
+              <input class="toppings" type="checkbox" name="topping" value="Olives"> Olives<br>
+              <input class="toppings" type="checkbox" name="topping" value="Extra Cheese"> Extra Cheese + $1<br>
             </div>
             <div class="text-center mb-5">
               <button type="submit" class="btn btn-outline-warning form-control btn-style font-label">Place My Order</button>
 
               <div class="form-group col-md-11" id="order-output">
 
-                <dic class="show-order"></div>
+                <div class="show-order"></div>
               </div>
             </div>
           </form>
