@@ -17,26 +17,37 @@ PizzaOrder.prototype.pizzaCalculation = function(){ //create a prototype method 
     this.price += 10;
   } else if (this.size === "Extra Large") {
     this.price += 12;
-    console.log(this.price);
+    // console.log(this.price);
   }
 
   for (var i=0; i<=this.toppings.length;i++) {
-    if (this.toppings[i] === "Sausage" || this.toppings[i] === "Pepperoni") {
+    if (this.toppings[i] === " Sausage" || this.toppings[i] === " Pepperoni") {
     this.price += 2;
-    } else if (this.toppings[i] === "Mushrooms" || this.toppings[i] === "Green Peppers" || this.toppings[i] === "Olives") {
+    } else if (this.toppings[i] === " Mushrooms" || this.toppings[i] === " Green Peppers" || this.toppings[i] === " Olives") {
     this.price += 1; //need to convert the parseint to decimals?
-    } else if (this.toppings[i] === "Extra Cheese") {
+    } else if (this.toppings[i] === " Extra Cheese") {
     this.price += 1;
-    console.log(this.toppings[i]);
+    // console.log(this.toppings[i]);
     }
   }
 }
-
-
-
+// function Address(street, city, state, zip) {
+//   this.street = street;
+//   this.city = city;
+//   this.state = state;
+//   this.zip = zip;
+// }
+//
+// Address.prototype.fullAddress = function() {
+//   return this.street + ", " + this.city + ", " + this.state;
+// }
 
 function resetFields() {
   $("#order-name").val("");
+  $(".street").val("");
+  $(".city").val("");
+  $(".state").val("");
+  $(".zip").val("");
   $("#size").val("");
   $('input[type=checkbox]').prop('checked', false);
 }
@@ -57,19 +68,32 @@ $(document).ready(function(){
       toppingChoiceArray.push(toppingSeleted);
       console.log($(this));
     });
-
     var newPizzaOrder = new PizzaOrder(orderName, price, size, toppingChoiceArray); //instance that holds the values for each item
-    newPizzaOrder.pizzaCalculation();  //create a variable to run a method to calculate the price - runing the backend logic
+    newPizzaOrder.pizzaCalculation();  //create a variable to run a method to calculate the price - running the backend logic
+
+    // $("#pizzaOrderAddresses").each(function(){
+    //   debugger;
+    //   var inputtedStreet = $(this).find("input.street").val();
+    //   var inputtedCity = $(this).find("input.city").val();
+    //   var inputtedState = $(this).find("input.state").val();
+    //   var inputtedZip = $(this).find("input.zip").val();
+    //
+    //   var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState, inputtedZip);
+    //   newAddress.fullAddress();
+    // });
 
     $("#order-output").append("<li><span class='pizzaOrderName'>" + newPizzaOrder.name + ", click here for your order details" + "</span></li>"); //listing name for order details
 
     $(".pizzaOrderName").last().click(function(){
-      var orderInformation = `<h2>Order Details:</h2>
-                              <img src='img/pizza.png'>
-                              <p class='lead outputDisplay'> ${newPizzaOrder.name}, here are your order details:</p>
-                              <p class='lead outputDisplay'> Pizza Size: ${newPizzaOrder.size}</p>
-                              <p class='lead outputDisplay'> Pizza Topping: ${newPizzaOrder.toppings}</p>
-                              <p class='lead outputDisplay'> Price: $ ${newPizzaOrder.price}</p>`;
+      var orderInformation = `<img src='img/pizza.png' alt='image of pizza'>
+                              <div class="flex output-styling" id="output-styling">
+                                <h3>Order Details:</h3>
+                                <hr>
+                                <p class='lead outputDisplay'> ${newPizzaOrder.name}, here's what you ordered:</p>
+                                <p class='lead outputDisplay'><span class="bold-output-text">Pizza Size:</span> ${newPizzaOrder.size}</p>
+                                <p class='lead outputDisplay'><span class="bold-output-text">Pizza Toppings:</span> ${newPizzaOrder.toppings}</p>
+                                <p class='lead outputDisplay'><span class="bold-output-text">Total Price:</span> $ ${newPizzaOrder.price}</p>
+                              </div>`;
 
       $(".show-order").html(orderInformation);
     });

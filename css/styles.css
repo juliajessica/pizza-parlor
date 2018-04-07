@@ -3,7 +3,14 @@ h1 {
   font-family: 'Noto Serif', serif;
   font-weight: bolder;
   color:#382925;
-  margin:25px;
+  margin:10px;
+}
+
+h5, h3, .bold-output-text {
+  font-size: 20px;
+  font-family: 'Noto Serif', serif;
+  color:#382925;
+  padding-bottom:17px;
 }
 
 body {
@@ -57,9 +64,34 @@ label, .font-label, .output-text, .pizzaOrderName {
   font-size: 22px;
 }
 
-#order-output {
-  display: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+#output-styling {
+  background-color: #f9ba25;
+  color: #3d5432;
+  border-radius: 10px;
+  border:3px solid #846e1a;
+  position:relative;
+  padding: 14px 24px;
+  margin:0;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display:flex;
+  justify-content:center;
+  display:inline-block;
+  text-align:center;
+  width:350px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+  &:before {
+    -webkit-transition:0.5s all ease;
+    transition:0.5s all ease;
+    position:absolute;
+    top:0;
+    left:50%;
+    right:50%;
+    bottom:0;
+    opacity:0;
+    content:'';
+    z-index:-2;
+  }
 }
