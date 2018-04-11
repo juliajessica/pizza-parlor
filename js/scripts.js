@@ -35,9 +35,23 @@ PizzaOrder.prototype.pizzaCalculation = function(){ //create a prototype method 
     }
   }
 }
+// function Address(street, city, state, zip) {
+//   this.street = street;
+//   this.city = city;
+//   this.state = state;
+//   this.zip = zip;
+// }
+//
+// Address.prototype.fullAddress = function() {
+//   return this.street + ", " + this.city + ", " + this.state;
+// }
 
 function resetFields() {
   $("#order-name").val("");
+  $(".street").val("");
+  $(".city").val("");
+  $(".state").val("");
+  $(".zip").val("");
   $("#size").val("");
   $('input[type=checkbox]').prop('checked', false);
 }
@@ -60,6 +74,17 @@ $(document).ready(function(){
     });
     var newPizzaOrder = new PizzaOrder(orderName, price, size, toppingChoiceArray); //instance that holds the values for each item
     newPizzaOrder.pizzaCalculation();  //create a variable to run a method to calculate the price - running the backend logic
+
+    // $("#pizzaOrderAddresses").each(function(){
+    //   debugger;
+    //   var inputtedStreet = $(this).find("input.street").val();
+    //   var inputtedCity = $(this).find("input.city").val();
+    //   var inputtedState = $(this).find("input.state").val();
+    //   var inputtedZip = $(this).find("input.zip").val();
+    //
+    //   var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState, inputtedZip);
+    //   newAddress.fullAddress();
+    // });
 
     $("#order-output").append("<li><span class='pizzaOrderName'>" + newPizzaOrder.name + ", click here for your order details" + "</span></li>"); //listing name for order details
 

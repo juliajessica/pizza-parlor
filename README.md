@@ -35,6 +35,7 @@ _Feel free to email either or us at [juliajessicasher@gmail.com](mailto:juliajes
 | The program will calculate correctly for multiple topping selections | Input: "Julia: Medium, Sausage, Mushrooms, Extra Cheese" | Output: "Julia": $11 |
 | The program will calculate price correctly for different size | Input: "Julia: Large, Pepperoni, Mushrooms, Extra Cheese" | Output: "Julia: $14" |
 | The program will calculate price correctly for all toppings | Input: "Julia: Extra Large, Sausage, Pepperoni,  Mushrooms, Green Peppers, Olives, Extra Cheese" | Output: "Julia: $20" |
+
 ### License
 
 Copyright (c) 2018 ****_Julia Sheremet_****
