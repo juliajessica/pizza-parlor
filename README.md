@@ -29,11 +29,12 @@ _Feel free to email either or us at [juliajessicasher@gmail.com](mailto:juliajes
 ### Specs
 | Behavior | Input | Output |
 | :-------------     | :------------- | :------------- |
-| The program will take an input name and return it | Input: "Julia" | Output: "Order for Julia" |
-| The program will create an object for an order and return a selected pizza size | Input: "Small" | Output: "Order for Julia: Small" |
-| The program will return a selected topping size | Input: "Pepperoni" | Output: "Order for Julia: Small, Pepperoni" |
-| The program will add and return more than one topping selected | Input: "Pepperoni, Mushrooms" | Output: "Order for Julia: Small, Pepperoni, Mushrooms" |
-| The program will calculate a total price for the order | Input: "Order for Julia: Small, Pepperoni, Mushrooms" | Output: "Order for Julia: Small, Pepperoni, Mushrooms Total: $8" |
+| The program will take an input name and return it | Input: "Julia" | Output: "Julia" |
+| The program will calculate and return a price based on size | Input: "Julia: Small" | Output: "Julia": $5 |
+| The program will calculate and return a price based on topping size | Input: "Julia: Small, Pepperoni" | Output:  "Julia:" $7 |
+| The program will calculate correctly for multiple topping selections | Input: "Julia: Medium, Sausage, Mushrooms, Extra Cheese" | Output: "Julia": $11 |
+| The program will calculate price correctly for different size | Input: "Julia: Large, Pepperoni, Mushrooms, Extra Cheese" | Output: "Julia: $14" |
+| The program will calculate price correctly for all toppings | Input: "Julia: Extra Large, Sausage, Pepperoni,  Mushrooms, Green Peppers, Olives, Extra Cheese" | Output: "Julia: $20" |
 ### License
 
 Copyright (c) 2018 ****_Julia Sheremet_****

@@ -18,6 +18,8 @@ PizzaOrder.prototype.pizzaCalculation = function(){ //create a prototype method 
   } else if (this.size === "Extra Large") {
     this.price += 12;
     // console.log(this.price);
+  } else {
+    console.log("something broke!");
   }
 
   for (var i=0; i<=this.toppings.length;i++) {
@@ -28,6 +30,8 @@ PizzaOrder.prototype.pizzaCalculation = function(){ //create a prototype method 
     } else if (this.toppings[i] === " Extra Cheese") {
     this.price += 1;
     // console.log(this.toppings[i]);
+    } else {
+    console.log("something broke!");
     }
   }
 }
