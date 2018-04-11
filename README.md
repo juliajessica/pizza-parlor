@@ -6,7 +6,7 @@
 
 ## Description
 
-_This webpage is designed to....._
+_This webpage is designed to take the user input for a pizza order and return a name for the order, size, array of toppings and a calculated total price._
 
 ## Setup/Installation Requirements
 
